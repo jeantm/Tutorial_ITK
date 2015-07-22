@@ -24,10 +24,7 @@ writer->SetFileName( argv[2] );
 
 filter->SetInput( reader->GetOutput() );
 
-filter->SetOutsideValue( outsideValue );
-filter->SetInsideValue( insideValue );
+filter->SetOutsideValue( 0 );
 
-filter->SetLowerThreshold( lowerTreshold );
-filter->SetUpperThreshold( upperTreshold );
-
+filtrt->ThresholdOutside( 100, 170 );
 filter->Update();
